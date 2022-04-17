@@ -1,6 +1,6 @@
 const button = document.querySelectorAll("button");
 const list = document.querySelector("ul");
-const input = document.querySelector("#textInput");
+const dltIcn = document.querySelector(".delete-icon")
 const div = document.querySelector(".insert-list");
 const sortIcon = document.querySelector(".sort-img");
 const error = document.querySelector(".error");
@@ -8,7 +8,13 @@ const insBtn = document.querySelector(".insert-button")
 const insTxt = document.querySelector(".ins-text")
 const insIcn = document.querySelector(".ins-icon")
 const deletebtn = document.querySelector(".delete-icon img");
-const dltIcn = document.querySelector(".delete-icon")
+const input = document.querySelector("#textInput");
+
+document.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    addList(event);
+  }
+});
 
 list.addEventListener("mouseover", function(event){
   event.target.style.backgroundColor = "red"
@@ -25,17 +31,20 @@ insBtn.addEventListener("mouseover", function(event){
   event.target.style.backgroundColor= "red"
   event.target.style.transition = "0.5s"
   event.target.style.fontSize = "16px"
+  
 })
 insTxt.addEventListener("mouseout", function(event){
   event.target.style.backgroundColor = "#833ae0"
   event.target.style.transition = "0.5s"
   event.target.style.fontSize = "13.5px"
+  
 })
 insIcn.addEventListener("mouseout", function(event){
   event.target.style.backgroundColor = "#aa68fe"
   event.target.style.transition = "0.5s"
   event.target.style.fontSize = "13.5px"
 })
+
 button.forEach((item) => {
   item.addEventListener("click", addList);
 });
@@ -63,6 +72,7 @@ function addList(event) {
     div.style.display = "block";
   }
 }
+
 deletebtn.addEventListener("mouseover", function(event){
   event.target.style.borderRadius = "71px"
   event.target.style.backgroundColor = "white"
@@ -101,6 +111,10 @@ function mouseOver(event) {
   if (event.target.className === "delete-img") {
     event.target.src = "/image/new.png";
     event.target.style.cursor = "pointer";
+    event.target.style.backgroundColor = "white"
+    event.target.style.borderRadius = "71px"
+    event.target.style.border = "none"
+    event.target.style.transition = "0.4s"
     list.removeEventListener("mouseout", mouseOver);
   }
 }
@@ -152,8 +166,3 @@ function reverseSortTask(event) {
     sortIcon.addEventListener("click", sortTask);
   }
 }
-document.addEventListener("keypress", (event) => {
-  if (event.key == "Enter") {
-    addList(event);
-  }
-});
