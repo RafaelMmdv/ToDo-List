@@ -3,11 +3,11 @@ const list = document.querySelector("ul");
 const input = document.querySelector("#textInput");
 const div = document.querySelector(".insert-list");
 const sortIcon = document.querySelector(".sort-img");
-const deletebtn = document.querySelector(".delete-icon img");
 const error = document.querySelector(".error");
 const insBtn = document.querySelector(".insert-button")
 const insTxt = document.querySelector(".ins-text")
 const insIcn = document.querySelector(".ins-icon")
+const deletebtn = document.querySelector(".delete-icon img");
 const dltIcn = document.querySelector(".delete-icon")
 
 list.addEventListener("mouseover", function(event){
@@ -15,10 +15,7 @@ list.addEventListener("mouseover", function(event){
   event.target.style.transition = "0.5s"
   event.target.style.fontSize = "17px"
 })
-dltIcn.addEventListener("mouseover", function(event){
-  event.target.style.borderRadius = "71px"
-  event.target.style.backgroundColor = "white"
-})
+
 list.addEventListener("mouseout", function(event){
   event.target.style.backgroundColor = "white"
   event.target.style.transition = "0.5s"
@@ -42,11 +39,7 @@ insIcn.addEventListener("mouseout", function(event){
 button.forEach((item) => {
   item.addEventListener("click", addList);
 });
-document.addEventListener("keypress", (event) => {
-  if (event.key == "Enter") {
-    addList(event);
-  }
-});
+
 function addList(event) {
   if (input.value != "") {
     let dltbtnnew = document.createElement("button");
@@ -62,13 +55,18 @@ function addList(event) {
     list.append(li);
     input.value = "";
     error.style.display = "none";
-  } else {
-    error.style.display = "block";
-  }
+  } 
+  
+  else {
+    error.style.display = "block";}
   if (list.children.length != 0) {
     div.style.display = "block";
   }
 }
+deletebtn.addEventListener("mouseover", function(event){
+  event.target.style.borderRadius = "71px"
+  event.target.style.backgroundColor = "white"
+})
 
 list.addEventListener("click", function (event) {
   if (event.target.className === "delete-img") {
@@ -154,4 +152,8 @@ function reverseSortTask(event) {
     sortIcon.addEventListener("click", sortTask);
   }
 }
-
+document.addEventListener("keypress", (event) => {
+  if (event.key == "Enter") {
+    addList(event);
+  }
+});
