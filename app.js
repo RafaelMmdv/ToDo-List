@@ -16,17 +16,6 @@ document.addEventListener("keypress", (event) => {
   }
 });
 
-list.addEventListener("mouseover", function(event){
-  event.target.style.backgroundColor = "red"
-  event.target.style.transition = "0.5s"
-  event.target.style.fontSize = "17px"
-})
-
-list.addEventListener("mouseout", function(event){
-  event.target.style.backgroundColor = "white"
-  event.target.style.transition = "0.5s"
-  event.target.style.fontSize = "15.5px"
-})
 insBtn.addEventListener("mouseover", function(event){
   event.target.style.backgroundColor= "red"
   event.target.style.transition = "0.5s"
