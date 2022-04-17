@@ -1,6 +1,6 @@
 # ToDo-List-Task
 
-Netlify: https://profound-axolotl-b57c2a.netlify.app/
+Netlify: https://superb-swan-f61685.netlify.app/
 
 Modul 2. Layihə "Task Tracker proqramının tərtibatı".
 
