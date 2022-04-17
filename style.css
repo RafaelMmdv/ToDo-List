@@ -72,17 +72,6 @@ body {
   border: none;
   border-radius: 10px;
 }
-#textInput:focus {
-  outline: none !important;
-  border: none;
-}
-.delete-icon {
-  position: relative;
-  left: 240px;
-  top: -28px;
-  width: 20px;
-  height: 20px;
-}
 .delete-icon-list {
   width: 20px;
   height: 20px;
@@ -94,6 +83,18 @@ body {
   -ms-border-radius: 71px;
   -o-border-radius: 71px;
 }
+#textInput:focus {
+  outline: none !important;
+  border: none;
+}
+.delete-icon {
+  position: relative;
+  left: 240px;
+  top: -28px;
+  width: 20px;
+  height: 20px;
+}
+
 .delete-input {
   border: none;
   background: white;
@@ -121,7 +122,7 @@ body {
 }
 .error {
   color: red;
-  font-size: 16px;
+  font-size: 15px;
   height: 20px;
   width: 250px;
   display: none;
