@@ -121,7 +121,7 @@ body {
   margin-bottom: 19px;
 }
 .error {
-  color: red;
+  color: green;
   font-size: 15px;
   height: 20px;
   width: 250px;
