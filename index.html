@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ToDo-Project</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="text">To-Do List</div>
+      <div class="sort-img">
+        <img
+          id="sortImg"
+          src="/image/listdown.png"
+          alt="sort-img"
+        />
+      </div>
+      <div class="textinput text-Input">
+        <input id="textInput" type="text" />
+        <div class="delete-icon">
+          <img
+            class="delete-img"
+            src="/image/remove.png"
+            alt="delete-icon">
+        </div>
+      </div>
+      <div class="error"><span>Input value</span></div>
+      <div class="text-Input insert-list">
+        <ul></ul>
+      </div>
+      <div class="insert-button">
+        <button class="insert-text insert">Добавить</button>
+        <button class="insert-icon insert">+</button>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
