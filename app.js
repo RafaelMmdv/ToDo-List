@@ -114,7 +114,6 @@ function mouseOver(event) {
     event.target.style.backgroundColor = "white"
     event.target.style.borderRadius = "71px"
     event.target.style.border = "none"
-    event.target.style.transition = "0.4s"
     list.removeEventListener("mouseout", mouseOver);
   }
 }
