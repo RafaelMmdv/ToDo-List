@@ -6,6 +6,7 @@ const sortIcon = document.querySelector(".sort-img");
 const deletebtn = document.querySelector(".delete-icon img");
 const error = document.querySelector(".error");
 
+
 btn.forEach((item) => {
   item.addEventListener("click", addList);
 });
@@ -49,19 +50,19 @@ ul.addEventListener("click", function (event) {
   }
 });
 
-deletebtn.addEventListener("mouseover", btnmouseOver);
+deletebtn.addEventListener("mouseover", buttonOver);
 deletebtn.addEventListener("mouseout", mouseOut);
 deletebtn.addEventListener("click", (event) => {
   input.value = "";
 });
-function btnmouseOver(event) {
+function buttonOver(event) {
   event.target.src = "/image/new.png";
   event.target.style.cursor = "pointer";
-  deletebtn.removeEventListener("mouseout", btnmouseOver);
+  deletebtn.removeEventListener("mouseout", buttonOver);
 }
-function btnmouseOut(event) {
+function buttonOut(event) {
   event.target.src = "/image/remove.png";
-  deletebtn.removeEventListener("mouseover", btnmouseOut);
+  deletebtn.removeEventListener("mouseover", buttonOut);
 }
 
 ul.addEventListener("mouseover", mouseOver);
@@ -80,14 +81,14 @@ function mouseOut(event) {
   }
 }
 
-sortIcon.addEventListener("click", sortList);
+sortIcon.addEventListener("click", sortTask);
 sortIcon.addEventListener("mouseover", (event) => {
   if (event.target.id === "sortImg") {
     event.target.style.cursor = "pointer";
   }
 });
 
-function sortList(event) {
+function sortTask(event) {
   if (event.target.id === "sortImg") {
     if (ul.children.length != 0) {
       let newDAta = [];
@@ -100,11 +101,11 @@ function sortList(event) {
         ul.children[i].childNodes[0].textContent = newDAta[i];
       }
     }
-    sortIcon.removeEventListener("click", sortList);
-    sortIcon.addEventListener("click", revSortList);
+    sortIcon.removeEventListener("click", sortTask);
+    sortIcon.addEventListener("click", reverseSortTask);
   }
 }
-function revSortList(event) {
+function reverseSortTask(event) {
   if (event.target.id === "sortImg") {
     if (ul.children.length != 0) {
       let newDAta = [];
@@ -117,7 +118,7 @@ function revSortList(event) {
         ul.children[i].childNodes[0].textContent = newDAta[i];
       }
     }
-    sortIcon.removeEventListener("click", revSortList);
-    sortIcon.addEventListener("click", sortList);
+    sortIcon.removeEventListener("click", reverseSortTask);
+    sortIcon.addEventListener("click", sortTask);
   }
 }
