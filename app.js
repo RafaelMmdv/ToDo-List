@@ -5,8 +5,8 @@ const div = document.querySelector(".insert-list");
 const sortIcon = document.querySelector(".sort-img");
 const error = document.querySelector(".error");
 const insBtn = document.querySelector(".insert-button")
-const insTxt = document.querySelector(".ins-text")
-const insIcn = document.querySelector(".ins-icon")
+const insTxt = document.querySelector(".btn-text")
+const insIcn = document.querySelector(".btn-plus")
 const deletebtn = document.querySelector(".delete-icon img");
 const input = document.querySelector("#textInput");
 

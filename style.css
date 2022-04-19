@@ -78,7 +78,7 @@ body {
   border-radius: 71px;
 }
 #textInput:focus {
-  outline: none !important;
+  outline: none;
   border: none;
 }
 .delete-icon {
@@ -102,7 +102,7 @@ body {
   display: flex;
   width: 150px;
   height: 42px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-weight: 400;
   color: white;
   line-height: 16px;
@@ -125,14 +125,11 @@ body {
 }
 .insert-list {
   height: auto;
-  display: none;
   color: black;
+  display: none;
   border-radius: 10px;
 }
-ul {
-  box-sizing: border-box;
-  border-radius: 10px;
-}
+
 .list {
   list-style-type: none;
   padding: 5px 20px;
@@ -145,13 +142,17 @@ ul {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+ul {
+  box-sizing: border-box;
+  border-radius: 10px;
+}
 .insert {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 71px;
 }
-.ins-icon {
+.btn-plus {
   background: #aa68fe;
   color: white;
   width: 42px;
@@ -159,7 +160,7 @@ ul {
   position: absolute;
   border: none;
 }
-.ins-text {
+.btn-text {
   background: #833ae0;
   color: white;
   padding-left: 30px;
